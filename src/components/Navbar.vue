@@ -11,9 +11,11 @@
             :class="{ 'is-active': showMenu }"
             @click="$emit('navbar-toggle')"
           >
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
+            <i
+              :key="showMenu ? 'close' : 'menu'"
+              :class="['mdi', showMenu ? 'mdi-close' : 'mdi-menu']"
+              style="font-size: 1.5em;"
+            ></i>
           </a>
         </div>
         <div class="navbar-menu" :class="{ 'is-active': showMenu }">
@@ -68,5 +70,22 @@ export default {
   i.fa-fw {
     width: 0.8em;
   }
+}
+
+.burger-icon-container {
+  /* No special positioning needed */
+}
+.burger-icon-container i {
+  /* No special positioning needed */
+}
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity 0.2s;
+}
+.fade-enter-from, .fade-leave-to {
+  opacity: 0;
+}
+.fade-enter-to, .fade-leave-from {
+  opacity: 1;
 }
 </style>

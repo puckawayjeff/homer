@@ -1,4 +1,5 @@
 import "./assets/app.scss";
+import "@mdi/font/css/materialdesignicons.css";
 import { createApp, h } from "vue";
 import App from "./App.vue";
 

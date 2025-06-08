@@ -32,6 +32,7 @@
         @navbar-toggle="showMenu = !showMenu"
       >
         <DarkMode
+          v-if="config.defaults?.enableThemeToggle !== false"
           :default-value="config.defaults.colorTheme"
           @updated="isDark = $event"
         />

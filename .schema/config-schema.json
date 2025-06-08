@@ -82,6 +82,11 @@
             "dark"
           ],
           "description": "One of 'auto', 'light', or 'dark'"
+        },
+        "enableThemeToggle": {
+          "type": "boolean",
+          "description": "Whether to show the theme toggle button. Defaults to true if not specified.",
+          "default": true
         }
       },
       "title": "Defaults"

@@ -20,6 +20,9 @@ yarn-error.log*
 *.sln
 *.sw?
 
+# PowerShell scripts
+*.ps1
+
 # App configuration
 config.yml
 

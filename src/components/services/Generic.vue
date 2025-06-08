@@ -12,7 +12,13 @@
               </div>
               <div v-if="item.icon" class="media-left">
                 <figure class="image is-48x48">
-                  <i style="font-size: 32px" :class="['fa-fw', item.icon]"></i>
+                  <i 
+                    style="font-size: 32px" 
+                    :class="[
+                      item.icon.startsWith('mdi') ? 'mdi' : 'fa-fw',
+                      item.icon
+                    ]"
+                  ></i>
                 </figure>
               </div>
             </slot>
@@ -31,7 +37,10 @@
                     <span v-if="link.icon"
                       ><i
                         style="font-size: 12px"
-                        :class="['fa-fw', link.icon]"
+                        :class="[
+                          link.icon.startsWith('mdi') ? 'mdi' : 'fa-fw',
+                          link.icon
+                        ]"
                       ></i
                     ></span>
                     {{ link.name }}
